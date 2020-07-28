@@ -1,0 +1,203 @@
+{
+  "categorias": [
+    {
+      "titulo": "Ciência",
+      "link": "https://www.youtube.com/user/nerdologia",
+      "cor": "#26FFF9",
+      "link_extra": {
+        "text": "Aprenda sobre Ciência",
+        "url": "https://www.youtube.com/user/nerdologia"
+      },
+      "videos": [
+        {
+          "titulo": "Como a ciência tornou a guerra mais mortal | Nerdologia",
+          "url": "https://www.youtube.com/watch?v=ykSILAQQu6o"
+        },
+        {
+          "titulo": "A origem do universo | Teoria do BIG BANG",
+          "url": "https://www.youtube.com/watch?v=Bl8Q7Lt56y0"
+        },
+        {
+          "titulo": "A TERRA É PLANA? Com Leon e Nilce",
+          "url": "https://www.youtube.com/watch?v=nEVPDqUb5dM"
+        },
+        {
+          "titulo": "Por onde vem a internet? Seguimos a fibra até sua casa! #Boravê 🔵Manual do Mundo",
+          "url": "https://www.youtube.com/watch?v=fYJl-7jRzuw"
+        },
+        {
+          "titulo": "Qual a diferença entre volt, watt e ampere?",
+          "url": "https://www.youtube.com/watch?v=JtttnL28m3Q"
+        }
+      ]
+    },
+    {
+      "titulo": "Biologia",
+      "cor": "#00C86F",
+      "link_extra": {
+        "text": "Na Natureza nada se cria, nada se perde, tudo se transforma",
+        "url": "https://www.youtube.com/user/nerdologia"
+      },
+      "videos": [
+        {
+          "titulo": "Essa tal imunidade de rebanho #FiqueEmCasa",
+          "url": "https://www.youtube.com/watch?v=KjFt7jPSJ2M"
+        },
+        {
+          "titulo": "A biologia e a Química por trás da COVID-19",
+          "url": "https://www.youtube.com/watch?v=K73FCFLxTA0"
+        },
+        {
+          "titulo": "O que seu DNA diz sobre você?",
+          "url": "https://www.youtube.com/watch?v=WH4hqF7yCaQ"
+        },
+        {
+          "titulo": "'Reino Monera'- A importância das BACTÉRIAS e suas curiosidades INCRÍVEIS - Vídeo Aula com Prof Renan",
+          "url": "https://www.youtube.com/watch?v=7ixzxe12QaE"
+        }
+      ]
+    },
+    {
+      "titulo": "História",
+      "cor": "red",
+      "link_extra": {
+        "text": "Entenda seu passado para não cometer os mesmos erros no futuro",
+        "url": "https://www.youtube.com/user/nerdologia"
+      },
+      "videos": [
+        {
+          "titulo": "Mulheres cientistas na História | Nerdologia História",
+          "url": "https://www.youtube.com/watch?v=WWvIQJg4SCM"
+        },
+        {
+          "titulo": "Idade Média: quando começou e quando acabou?",
+          "url": "https://www.youtube.com/watch?v=fA0mrh7Jhc0"
+        },
+        {
+          "titulo": "OS MISTÉRIOS DO ANTIGO EGITO - Nostalgia História",
+          "url": "https://www.youtube.com/watch?v=ebm-fLo9-NA"
+        },
+        {
+          "titulo": "De onde vieram os Índios? (#Pirula 172)",
+          "url": "https://www.youtube.com/watch?v=-MB2i3_9WWQ"
+        },
+        {
+          "titulo": "Estátuas, monumentos e suas derrubadas | Nerdologia",
+          "url": "https://www.youtube.com/watch?v=0ZPRObTQ02A"
+        }
+      ]
+    },
+    {
+      "titulo": "Paleontologia",
+      "cor": "#00C86F",
+      "link_extra": {
+        "text": "Tem coisa mais legal do que dinossauros?",
+        "url": "https://www.youtube.com/user/Pirulla25"
+      },
+      "videos": [
+        {
+          "titulo": "Qual a diferença entre Arqueologia e Paleontologia? (#Pirula 44)",
+          "url": "https://www.youtube.com/watch?v=3JtfHaejoa4"
+        },
+        {
+          "titulo": "Paleontologia - A História da Vida na Terra",
+          "url": "https://www.youtube.com/watch?v=JP8dmscymok"
+        },
+        {
+          "titulo": "Humanos e chimpanzés podem ter filhos híbridos? (#Pirula 315)",
+          "url": "https://www.youtube.com/watch?v=JOjSHaWeNQc"
+        },
+        {
+          "titulo": "Dinossauros: não foi o meteoro? (#Pirula 145)",
+          "url": "https://www.youtube.com/watch?v=NXjDLNmVmWg"
+        }
+      ]
+    },
+    {
+      "titulo": "Física",
+      "cor": "#7159C1",
+      "link_extra": {
+        "text": "Como descobrir os segredos do universo",
+        "url": "https://www.youtube.com/channel/UCn9Erjy00mpnWeLnRqhsA1g"
+      },
+      "videos": [
+        {
+          "titulo": "A ENTROPIA EXPLICADA",
+          "url": "https://www.youtube.com/watch?v=qjHfkfIs1Ug"
+        },
+        {
+          "titulo": "Física Quântica EXPLICADA",
+          "url": "https://www.youtube.com/watch?v=eA1E2HGdbKg"
+        },
+        {
+          "titulo": "O Gato de Schrödinger Explicado",
+          "url": "https://www.youtube.com/watch?v=pKEq8d_1pn4"
+        },
+        {
+          "titulo": "A física de Interestelar | Nerdologia",
+          "url": "https://www.youtube.com/watch?v=hvj_E767qyo"
+        }
+      ]
+    },
+    {
+      "titulo": "Tecnologia",
+      "cor": "#6b5be2",
+      "link_extra": {
+        "text": "Software, hackers, programação, vários assuntos incríveis!",
+        "url": "https://alura.com.br/curso-online-aprender-a-aprender-tecnicas-para-seu-autodesenvolvimento"
+      },
+      "videos": [
+        {
+          "titulo": "Aula 1 - Iniciando em Programação [Curso Python]",
+          "url": "https://www.youtube.com/watch?v=0uB6UJb9X_E"
+        },
+        {
+          "titulo": "Como estudar melhor?",
+          "url": "https://www.youtube.com/watch?v=Is6c9KSGCbk&feature=youtu.be"
+        },
+        {
+          "titulo": "Faculdade",
+          "url": "https://www.youtube.com/watch?v=jw06H8esyzQ&feature=youtu.be"
+        },
+        {
+          "titulo": "Como aprender a programar?",
+          "url": "https://www.youtube.com/watch?v=MwCx2qKdbDw&feature=youtu.be"
+        },
+        {
+          "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
+          "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
+        }
+      ]
+    },
+    {
+      "titulo": "Inteligência Artificial",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "text": "Robôs e algoritmos que ditarão o futuro da humanidade",
+        "url": "https://www.alura.com.br/formacao-data-science"
+      },
+      "videos": [
+        {
+          "titulo": "E Agora? Nova Inteligência Artificial Começou a Programar Sozinha",
+          "url": "https://www.youtube.com/watch?v=KdgKQoq1jk0"
+        },
+        {
+          "titulo": "Teste de Turing",
+          "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
+        },
+        {
+          "titulo": "O que é Data Science?",
+          "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
+        },
+        {
+          "titulo": "Melhor forma de aprender Python",
+          "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY"
+        },
+        {
+          "titulo": "Como ingressar no mercado de Data Science?",
+          "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
+        }
+      ]
+    }
+  ]
+}

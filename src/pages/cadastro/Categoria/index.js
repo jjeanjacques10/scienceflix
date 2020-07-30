@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField';
+import Button from '../../../components/Button';
 
 function CadastroCategoria() {
     const valoresIniciais = {
@@ -27,6 +28,38 @@ function CadastroCategoria() {
         );
     }
 
+    useEffect(() => {
+        console.log('alo alo w brasil');
+        const URL = 'http://localhost:8080/categorias';
+        fetch(URL)
+        .then(async (response) => {
+            const resposta = await response.json();
+            setCategorias(
+                [
+                    ...resposta,
+                ]
+            );
+        });
+
+        /*  setTimeout(() => {
+             setCategorias([
+                 ...categorias,
+                 {
+                     "id": 1,
+                     "nome": "Ciência",
+                     "descricao": "Aprenda sobre Ciência",
+                     "cor": "#26FFF9"
+                 },
+                 {
+                     "id": 2,
+                     "nome": "Biologia",
+                     "descricao": "Aprenda sobre Ciência",
+                     "cor": "#26FFF9"
+                 },
+             ]);
+         }, 4 * 1000); */
+    }, []);
+
     return (
         <PageDefault>
             <h1>Cadastro de Cadastro: {values.nome}</h1>
@@ -34,10 +67,12 @@ function CadastroCategoria() {
             <form onSubmit={function handleSubmit(infoDoEvento) {
                 infoDoEvento.preventDefault();
 
-                setCategorias([
-                    ...categorias,
-                    values
-                ]);
+                setTimeout(() => {
+                    setCategorias([
+                        ...categorias,
+                        values
+                    ]);
+                }, 4 * 1000);
 
                 setValues(valoresIniciais);
             }}>
@@ -67,13 +102,20 @@ function CadastroCategoria() {
                 />
 
 
-                <button>
+                <Button>
                     Cadastrar
-                </button>
+                </Button>
 
             </form>
 
+
+
             <ul>
+                {categorias.length === 0 && (
+                    <div>
+                        Loading...
+                    </div>
+                )}
                 {categorias.map((categoria, indice) => {
                     return (
                         <li key={`${categoria.nome}${indice}`}>

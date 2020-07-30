@@ -33,6 +33,7 @@ export const ExtraLink = styled.a`
   }
 `;
 
+/*
 export const VideoCardList = styled.ul`
   margin: 0;
   padding-left: 0;
@@ -46,6 +47,7 @@ export const VideoCardList = styled.ul`
     margin-right: 16px;
   }
 `;
+*/
 
 export const VideoCardGroupContainer = styled.section`
   color: white;

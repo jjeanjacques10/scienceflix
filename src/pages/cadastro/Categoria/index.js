@@ -30,7 +30,9 @@ function CadastroCategoria() {
 
     useEffect(() => {
         console.log('alo alo w brasil');
-        const URL = 'http://localhost:8080/categorias';
+        const URL = window.location.hostname.includes('localhost') 
+        ? 'http://localhost:8080/categorias' 
+        : 'https://scienceflix.herokuapp.com/categorias';
         fetch(URL)
         .then(async (response) => {
             const resposta = await response.json();

@@ -31,7 +31,6 @@ function CadastroCategoria() {
     }
 
     useEffect(() => {
-
         fetch(URL)
             .then(async (response) => {
                 const resposta = await response.json();

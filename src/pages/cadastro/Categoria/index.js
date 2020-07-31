@@ -12,7 +12,9 @@ function CadastroCategoria() {
     }
     const [categorias, setCategorias] = useState([]);
     const [values, setValues] = useState(valoresIniciais);
-
+    const URL = window.location.hostname.includes('localhost')
+        ? 'http://localhost:8080/categorias'
+        : 'https://scienceflix.herokuapp.com/categorias';
 
     function setValue(chave, valor) {
         setValues({
@@ -29,35 +31,16 @@ function CadastroCategoria() {
     }
 
     useEffect(() => {
-        console.log('alo alo w brasil');
-        const URL = 'http://localhost:8080/categorias';
-        fetch(URL)
-        .then(async (response) => {
-            const resposta = await response.json();
-            setCategorias(
-                [
-                    ...resposta,
-                ]
-            );
-        });
 
-        /*  setTimeout(() => {
-             setCategorias([
-                 ...categorias,
-                 {
-                     "id": 1,
-                     "nome": "Ciência",
-                     "descricao": "Aprenda sobre Ciência",
-                     "cor": "#26FFF9"
-                 },
-                 {
-                     "id": 2,
-                     "nome": "Biologia",
-                     "descricao": "Aprenda sobre Ciência",
-                     "cor": "#26FFF9"
-                 },
-             ]);
-         }, 4 * 1000); */
+        fetch(URL)
+            .then(async (response) => {
+                const resposta = await response.json();
+                setCategorias(
+                    [
+                        ...resposta,
+                    ]
+                );
+            });
     }, []);
 
     return (
@@ -66,13 +49,21 @@ function CadastroCategoria() {
 
             <form onSubmit={function handleSubmit(infoDoEvento) {
                 infoDoEvento.preventDefault();
+                console.log(JSON.stringify(values));
+                fetch(URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) })
+                    .then(async (response) => {
+                        const resposta = await response.json();
+                        setCategorias([
+                            ...categorias,
+                            resposta
+                        ]);
+                    });
 
-                setTimeout(() => {
-                    setCategorias([
-                        ...categorias,
-                        values
-                    ]);
-                }, 4 * 1000);
+                /*  setCategorias([
+                     ...categorias,
+                     values
+                 ]);
+  */
 
                 setValues(valoresIniciais);
             }}>
@@ -125,8 +116,8 @@ function CadastroCategoria() {
                 })}
             </ul>
 
-            <Link to="/cadastro/categoria">
-                Cadastrar Categoria
+            <Link to="/">
+                Ir para home
             </Link>
         </PageDefault>
     )

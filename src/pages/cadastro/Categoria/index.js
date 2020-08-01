@@ -3,75 +3,51 @@ import PageDefault from '../../../components/PageDefault';
 import { Link } from 'react-router-dom';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
     const valoresIniciais = {
-        nome: '',
+        titulo: '',
         descricao: '',
         cor: '',
     }
+
+    const { values, handleChange, clearForm } = useForm(valoresIniciais);
     const [categorias, setCategorias] = useState([]);
-    const [values, setValues] = useState(valoresIniciais);
-    const URL = window.location.hostname.includes('localhost')
-        ? 'http://localhost:8080/categorias'
-        : 'https://scienceflix.herokuapp.com/categorias';
-
-    function setValue(chave, valor) {
-        setValues({
-            ...values,
-            [chave]: valor, // nome: 'valor'
-        })
-    }
-
-    function handleChange(infosDoEvento) {
-        setValue(
-            infosDoEvento.target.getAttribute('name'),
-            infosDoEvento.target.value
-        );
-    }
 
     useEffect(() => {
-        fetch(URL)
-            .then(async (response) => {
-                const resposta = await response.json();
-                setCategorias(
-                    [
-                        ...resposta,
-                    ]
-                );
+        categoriasRepository.getAll()
+            .then((categoriasComVideos) => {
+                setCategorias(categoriasComVideos);
+            })
+            .catch((err) => {
+                console.error(err.message);
             });
     }, []);
 
     return (
         <PageDefault>
-            <h1>Cadastro de Cadastro: {values.nome}</h1>
+            <h1>Cadastro de Cadastro: {values.titulo}</h1>
 
             <form onSubmit={function handleSubmit(infoDoEvento) {
                 infoDoEvento.preventDefault();
-                console.log(JSON.stringify(values));
-                fetch(URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) })
-                    .then(async (response) => {
-                        const resposta = await response.json();
-                        setCategorias([
-                            ...categorias,
-                            resposta
-                        ]);
-                    });
 
-                /*  setCategorias([
-                     ...categorias,
-                     values
-                 ]);
-  */
+                categoriasRepository.create();
 
-                setValues(valoresIniciais);
+                setCategorias([
+                    ...categorias,
+                    resposta
+                ]);
+
+                clearForm();
             }}>
 
                 <FormField
                     label="Nome da Categoria"
                     type="text"
-                    name="nome"
-                    value={values.nome}
+                    name="titulo"
+                    value={values.titulo}
                     onChange={handleChange}
                 />
 
@@ -108,12 +84,14 @@ function CadastroCategoria() {
                 )}
                 {categorias.map((categoria, indice) => {
                     return (
-                        <li key={`${categoria.nome}${indice}`}>
-                            {categoria.nome}
+                        <li key={`${categoria.titulo}${indice}`}>
+                            {categoria.titulo}
                         </li>
                     )
                 })}
             </ul>
+            <br />
+            <br />
 
             <Link to="/">
                 Ir para home

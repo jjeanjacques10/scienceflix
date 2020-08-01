@@ -28,11 +28,13 @@ function getAllWithVideos() {
 
 function create(values) {
     fetch(URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) })
-        .then(async (response) => {
-            const resposta = await response.json();
+        .then(async (respostaDoServidor) => {
+            if (respostaDoServidor.ok) {
+                const resposta = await respostaDoServidor.json();
+                return resposta;
+            }
 
-            return resposta;
-
+            throw new Error('Não foi possível cadastrar os dados :(');
         });
 }
 

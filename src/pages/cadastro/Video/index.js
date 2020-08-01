@@ -27,7 +27,6 @@ function CadastroVideo() {
 
             <form onSubmit={(event) => {
                 event.preventDefault();
-                // alert('Video Cadastrado com sucesso!!!1!');
 
                 const categoriaEscolhida = categorias.find((categoria) => {
                     return categoria.titulo === values.categoria;
@@ -37,11 +36,12 @@ function CadastroVideo() {
                     titulo: values.titulo,
                     url: values.url,
                     categoriaId: categoriaEscolhida.id,
-                })
-                    .then(() => {
-                        console.log('Cadastrou com sucesso!');
-                        history.push('/');
-                    });
+                }).then(() => {
+                    console.log('Cadastrou com sucesso!');
+                    history.push('/');
+                }).catch((err) => {
+                    console.error(err)
+                });
             }}
             >
                 <FormField

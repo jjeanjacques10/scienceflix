@@ -29,7 +29,7 @@ Para clonar e rodar a aplicar você precisa do [Git](https://git-scm.com), [Node
 
 ```bash
 # Clona o repositório
-$ git clone https://github.com/OLucasAlves/lucasflix.git
+$ git clone https://github.com/jjeanjacques10/scienceflix.git
 
 
 # Inicia o projeto (ReactJS)
